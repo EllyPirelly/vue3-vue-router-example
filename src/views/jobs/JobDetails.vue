@@ -1,23 +1,32 @@
 <template>
-  <h1>Job Details Page</h1>
-  <p>The job id is {{ id }}</p>
-  <!-- instead of solving this via data object, this can be used: -->
-  <!-- <p>The job id is {{ $route.params.id }}</p> -->
+  <div v-if="job">
+    <h1>{{ job.title }}</h1>
+    <p>The job id is {{ id }}</p>
+    <p>{{ job.details }}</p>
+  </div>
+  <div v-else>
+    <p>Loading job details...</p>
+  </div>
 </template>
 
 <script>
 export default {
-  /* id can be passed via data object OR via props, defined in router */
   props: ['id'],
 
-  /*   data() {
+  data() {
     return {
-      id: this.$route.params.id,
+      job: null,
     }
-  }, */
+  },
 
-  components: {
-    //
+  mounted() {
+    /* asynchronuous, returns a promise */
+    fetch('http://localhost:3000/jobs/' + this.id)
+      /* also asynchronuous, also returns a promise */
+      .then((response) => response.json())
+      .then((data) => (this.job = data))
+      /* catch a message if there's an error */
+      .catch((err) => console.log(err.message))
   },
 }
 </script>
