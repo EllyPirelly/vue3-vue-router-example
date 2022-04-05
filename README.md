@@ -3,6 +3,12 @@
 ## What is this about?
 - how do `router-view` and `router-link` work
 - how to properly organise your folders and files in regard of that
+- how to programmatically guide a user through a website
+
+![router-1](./src/assets/screenshots/vue3-router-1.png)
+![router-2](./src/assets/screenshots/vue3-router-2.png)
+![router-3](./src/assets/screenshots/vue3-router-3.png)
+![router-4](./src/assets/screenshots/vue3-router-4.png)
 
 ## Tech Stack
 - Vue 3
