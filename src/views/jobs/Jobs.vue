@@ -8,7 +8,15 @@
     </div>
   </div>
   <div v-else>
-    <p>Loading jobs...</p>
+    <p>
+      Loading job details...
+      <br />
+      Did you <i>maybe</i> forgot to run
+      <span class="command">npx json-server --watch data/db.json</span> to fire
+      up JSON Server?...
+      <br />
+      Do it. I'll wait.
+    </p>
   </div>
 </template>
 

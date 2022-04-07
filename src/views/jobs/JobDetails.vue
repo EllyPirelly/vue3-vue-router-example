@@ -5,7 +5,15 @@
     <p>{{ job.details }}</p>
   </div>
   <div v-else>
-    <p>Loading job details...</p>
+    <p>
+      Loading job details...
+      <br />
+      Did you <i>maybe</i> forgot to run
+      <span class="command">npx json-server --watch data/db.json</span> to fire
+      up JSON Server?...
+      <br />
+      Do it. I'll wait.
+    </p>
   </div>
 </template>
 
@@ -32,5 +40,9 @@ export default {
 </script>
 
 <style lang="scss">
-//
+.command {
+  color: purple;
+  font-weight: bold;
+  line-height: 1.5em;
+}
 </style>
