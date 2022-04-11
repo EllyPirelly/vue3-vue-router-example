@@ -22,8 +22,6 @@
 
 <script>
 export default {
-  name: '',
-
   data() {
     return {
       jobs: [],
