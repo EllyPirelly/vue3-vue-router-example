@@ -15,10 +15,6 @@ export default {
       id: this.$route.params.id,
     }
   }, */
-
-  components: {
-    //
-  },
 }
 </script>
 

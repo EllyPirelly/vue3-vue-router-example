@@ -9,8 +9,6 @@
 
 <script>
 export default {
-  name: '',
-
   data() {
     return {
       jobs: [
@@ -19,10 +17,6 @@ export default {
         { title: 'Vue Developer', id: 3, details: 'loremmm' },
       ],
     }
-  },
-
-  components: {
-    //
   },
 }
 </script>
